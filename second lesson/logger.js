@@ -1,11 +1,14 @@
-const url = 'http://mylogger.io/log'
-const emitter = require('./05')
+const EventEmitter = require('events')
 
 function log(message) {
     emitter.emit('loggin', message)
 }
 
-log("Hello World")
+class Logger extends EventEmitter {
+    log (message) {
+        console.log(message)
+        this.emit('messageLogged', { message })
+    }
+}
 
-module.exports.log = log
-module.exports.url = url
+module.exports = Logger

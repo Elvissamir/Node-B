@@ -1,16 +1,13 @@
 const EventEmitter = require('events')
 const emitter = new EventEmitter()
+const Logger = require('./logger')
 
 // Register a listener
-emitter.on('messageLogged', (args) => {
-    console.log('Listener called with args: ', args)
+emitter.on('messageLogged', ({ message }) => {
+    console.log('Logged with message ', message)
 })
 
-emitter.on('loggin', (data) => {
-    console.log('The message: ', data)
-})
-
-// Raise an event
-emitter.emit('messageLogged', { id: 1, url: 'http' })
+const logger = new Logger()
+logger.log('Hola World')
 
 module.exports = emitter

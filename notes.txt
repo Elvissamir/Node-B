@@ -91,3 +91,7 @@ where args is a variable (object, integer, string, array...)
 emitter.on('event name', function (args) {
     console.log(args)
 })
+
+- Each EventEmitter CLASS Instance has a set of listeners and emits, for that reason
+if you use two different emitters each of them will only 
+execute the callback for the assigned events
