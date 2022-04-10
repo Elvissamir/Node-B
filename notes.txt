@@ -80,3 +80,14 @@ emitter.emit('event_name')
 
 - The callback function provided to the event listener asigned 
 to a certain event will be executed when the event is raised.
+
+- To raise an event with data: 
+emitter.emit('event name', args)
+
+where args is a variable (object, integer, string, array...)
+
+- To use the data provided by a raised event: 
+
+emitter.on('event name', function (args) {
+    console.log(args)
+})
