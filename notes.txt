@@ -14,6 +14,7 @@ be used with the window object in browsers. Some examples:
 * global.console.log()
 * global.setInterval()
 
+
 ############ MODULES
 - Files are considered as MODULES in NODE. The variables and functions
 defined in a file are scoped to that file. If you want to use a variable
@@ -32,7 +33,7 @@ the module.exports.property_name. Example:
 module.exports.log = log 
 module.exports.url = url
 
-- To import a module in NODE you can use the global require method.
+- To import a module in NODE you can use the require function.
 NODE assumes required files are javascript files
 Example: 
 
@@ -41,3 +42,19 @@ const logger = require('./logger)
 Then all the properties and methods that are exported from the MODULE
 will be available in other MODULES.
 
+- Each MODULE (File) in NODE is wrapped by the MODULE WRAPPER FUNCTION.
+This function receives 5 parameters: 
+
+* exports, 
+* require, 
+* module, 
+* __filename, 
+* __dirname
+
+the function is added like this: 
+
+(function (exports, require, module, __filename, __dirname) {
+    // module code
+})
+
+That means that NODE does not execute the code directly
