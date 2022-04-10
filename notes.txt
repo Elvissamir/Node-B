@@ -12,3 +12,10 @@ be used with the window object in browsers. Some examples:
 
 * global.console.log()
 * global.setInterval()
+
+- Files are considered as MODULES in NODE. The variables and functions
+defined in a file are scoped to that file. If you want to use a variable
+or function from that module you have to export it and make it public.
+
+- The MODULE object in NODE represents the current module, and contains
+information as: id, path, exports, filename, loaded, children, paths.
