@@ -19,3 +19,13 @@ or function from that module you have to export it and make it public.
 
 - The MODULE object in NODE represents the current module, and contains
 information as: id, path, exports, filename, loaded, children, paths.
+
+- The MODULE object property "exports" represents the parts 
+(variables, objects) of the module that can be accessed in other
+files.
+
+- To export parts (variables, objects...) from the MODULE, you can use
+the module.exports.property_name. Example: 
+
+module.exports.log = log 
+module.exports.url = url
