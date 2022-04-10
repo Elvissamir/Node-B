@@ -1,3 +1,4 @@
+############ NODE CONCEPTS
 - NODE IS A RUNTIME ENVIRONMENT FOR EXECUTING JAVASCRIPT CODE.
 
 - JS ENGINE CONVERTS JS CODE TO MACHINE CODE.
@@ -13,6 +14,7 @@ be used with the window object in browsers. Some examples:
 * global.console.log()
 * global.setInterval()
 
+############ MODULES
 - Files are considered as MODULES in NODE. The variables and functions
 defined in a file are scoped to that file. If you want to use a variable
 or function from that module you have to export it and make it public.
@@ -29,3 +31,13 @@ the module.exports.property_name. Example:
 
 module.exports.log = log 
 module.exports.url = url
+
+- To import a module in NODE you can use the global require method.
+NODE assumes required files are javascript files
+Example: 
+
+const logger = require('./logger)
+
+Then all the properties and methods that are exported from the MODULE
+will be available in other MODULES.
+
