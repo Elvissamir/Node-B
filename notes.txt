@@ -58,3 +58,25 @@ the function is added like this:
 })
 
 That means that NODE does not execute the code directly
+
+
+########## EVENTS
+
+- An EVENT is: A signal that something has happened
+
+- In NODE the EVENT MODULE can be required like this: 
+const EventEmitter = require("events")
+
+the events module exports a class, then to use the methods
+you have to instanciate the class
+
+const emitter = new EventEmitter()
+
+- To register a listener:
+emitter.on('event_name', callback)
+
+- To raise an event: 
+emitter.emit('event_name')
+
+- The callback function provided to the event listener asigned 
+to a certain event will be executed when the event is raised.
