@@ -6,3 +6,5 @@
 
 - NODE does not use the DOM (DOCUMENT OBJECT MODEL), instead it provides
 some additional modules.
+
+- 
