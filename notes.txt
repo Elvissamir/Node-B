@@ -119,3 +119,28 @@ fs.readdir('./', (err, files) => {
     console.log(files)
 })
 
+
+######## HTTP MODULE 
+
+- The http module allows creating a server that receives requests
+
+const http = require('http')
+const server = http.createServer((req, res) => {
+    if (req.url === '/') {
+        res.write('Hello World')
+        res.end()
+    }
+})
+
+- The http MODULE extends the Event Emitter Class, so it is possible
+to add event listeners to the server. 
+
+server.on('connection, (socket) => {
+    console.log(socket)
+})
+
+- To receive http request you have to listen to a given port, 
+then the callback function specified with the createServer method will 
+execute and check the conditions that were defined.
+
+server.listen(3000)

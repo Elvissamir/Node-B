@@ -7,9 +7,6 @@ const server = http.createServer((req, res) => {
     }
 })
 
-server.on("connection", (socket) => {
-    console.log('New connection', socket)
-})
 
 server.listen(3000)
 
