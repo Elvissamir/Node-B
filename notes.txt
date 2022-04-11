@@ -152,6 +152,10 @@ execute and check the conditions that were defined.
 
 server.listen(3000)
 
+- You can use the close method to stop the server
+
+server.close(() => {})
+
 
 ######## OS MODULE
 
