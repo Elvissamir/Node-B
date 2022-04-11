@@ -151,3 +151,15 @@ then the callback function specified with the createServer method will
 execute and check the conditions that were defined.
 
 server.listen(3000)
+
+
+######## OS MODULE
+
+- The OS module allows getting information about the operative system, 
+including some data about the machine properties like:
+
+* platform() -> name of operative system
+* freeMem() -> Free Memory in bytes
+* totalMem() -> Total Memory in bytes
+* arch() -> machine architecture x32 or x64
+* cpus() -> number of logical CPU cores 
