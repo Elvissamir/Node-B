@@ -124,6 +124,13 @@ fs.readdir('./', (err, files) => {
 
 - The http module allows creating a server that receives requests
 
+- The https module refers to http Secure, which is a way of encrypting
+HTTP 
+
+- The http2 module refers to the new HTTP version released in 2015
+that addresses some performance issues, has less errors. Can be used with 
+HTTPS.
+
 const http = require('http')
 const server = http.createServer((req, res) => {
     if (req.url === '/') {
