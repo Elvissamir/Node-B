@@ -92,6 +92,30 @@ emitter.on('event name', function (args) {
     console.log(args)
 })
 
-- Each EventEmitter CLASS Instance has a set of listeners and emits, for that reason
-if you use two different emitters each of them will only 
+- Each EventEmitter CLASS Instance has a set of listeners and emits, 
+for that reason if you use two different emitters each of them will only 
 execute the callback for the assigned events
+
+
+######### FS (FILE SYSTEM) MODULE
+
+- The fs module allows interacting with the file system
+
+- You can require this module from the fs module or 
+from the fs/promises module. The promises version should be used 
+with async/await.
+
+const fs = require('fs')
+
+or
+
+const fs = require('fs/promises')
+
+- To get all the files in the directory as an array you can use the 
+readdir method: 
+
+const fs = require('fs')
+fs.readdir('./', (err, files) => {
+    console.log(files)
+})
+
