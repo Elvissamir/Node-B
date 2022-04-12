@@ -61,7 +61,6 @@ That means that NODE does not execute the code directly
 
 
 ########## EVENTS
-
 - An EVENT is: A signal that something has happened
 
 - In NODE the EVENT MODULE can be required like this: 
@@ -98,7 +97,6 @@ execute the callback for the assigned events
 
 
 ######### FS (FILE SYSTEM) MODULE
-
 - The fs module allows interacting with the file system
 
 - You can require this module from the fs module or 
@@ -121,7 +119,6 @@ fs.readdir('./', (err, files) => {
 
 
 ######## HTTP MODULE 
-
 - The http module allows creating a server that receives requests
 
 - The https module refers to http Secure, which is a way of encrypting
@@ -158,7 +155,6 @@ server.close(() => {})
 
 
 ######## OS MODULE
-
 - The OS module allows getting information about the operative system, 
 including some data about the machine properties like:
 
@@ -167,3 +163,4 @@ including some data about the machine properties like:
 * totalMem() -> Total Memory in bytes
 * arch() -> machine architecture x32 or x64
 * cpus() -> number of logical CPU cores 
+
