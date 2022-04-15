@@ -1,7 +1,6 @@
 const fs = require('fs')
 const file = process.argv[2]
 
-
 const fileStream = fs.createReadStream(__dirname + '/' + file, 'utf-8')
 
 fileStream.on('data', (chunk) => {
