@@ -1,3 +1,8 @@
 const EventEmitter = require('events')
+const eemiter = new EventEmitter()
 
-EventEmitter.emit()
+eemiter.once('connection', (stream) => {
+    console.log('Ah, we have our first user...')
+})
+
+console.log()

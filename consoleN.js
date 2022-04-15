@@ -3,3 +3,5 @@ console.log('Hola mundo')
 console.timeEnd('start')
 
 console.trace()
+
+console.log(arguments)
